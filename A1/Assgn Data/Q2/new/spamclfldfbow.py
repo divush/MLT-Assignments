@@ -15,6 +15,10 @@ plist=partlist
 plist.remove(rmstr)
 data=[]
 spam=[]
+fp=open('stopwords_list', 'r')
+stopwords=fp.read().strip().split()
+fp.close()
+
 lmtzr=WordNetLemmatizer()
 for foldername in plist:
 	folder_number=int(foldername[4:])
