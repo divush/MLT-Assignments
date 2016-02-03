@@ -49,7 +49,7 @@ for foldername in plist:
 #Also, spam[] stores the true labels. This corresponds to Y in the training set.
 
 
-CV=feature_extraction.text.CountVectorizer(binary=True)
+CV=feature_extraction.text.CountVectorizer(binary=True, stop_words=stopwords)
 vec=CV.fit_transform(data)
 #Here vec stores a vector corresponding to each message. Essentially the X in our learning set.
 

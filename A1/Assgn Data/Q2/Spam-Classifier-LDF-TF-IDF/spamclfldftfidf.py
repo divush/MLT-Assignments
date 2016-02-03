@@ -49,14 +49,14 @@ for foldername in plist:
 #Also, spam[] stores the true labels. This corresponds to Y in the training set.
 
 
-TFV=feature_extraction.text.TfidfVectorizer() #------------------------------------------------>The only difference!
+TFV=feature_extraction.text.TfidfVectorizer(ngram_range=(1,1), stop_words=stopwords) #------------------------------------------------>The only difference!
 #Note that binary is not True in prev!
-vec=TFV.fit_transform(data)
+tfidf_mat=TFV.fit_transform(data)
 #Here vec stores a vector corresponding to each message. Essentially the X in our learning set.
 
 #Build and train classifier. Also, take prior probabilities into account while making calculations.
 clf = perceptron.Perceptron(n_iter=100, verbose=0, random_state=None, fit_intercept=True, eta0=0.002)
-clf.fit(vec, spam)
+clf.fit(tfidf_mat, spam)
 
 #let us validate!
 testfolder='part'+str(folder_validate)
