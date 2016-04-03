@@ -1,0 +1,5 @@
+number of trees = 50	score = 0.779
+number of trees = 100	score = 0.793
+number of trees = 200	score = 0.787
+number of trees = 300	score = 0.783
+number of trees = 400	score = 0.788

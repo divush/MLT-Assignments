@@ -1,0 +1,5 @@
+score = 0.741
+score = 0.742
+score = 0.748
+score = 0.75
+score = 0.741
